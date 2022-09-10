@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+
+
+.images{
+  display: flex;
+  
+}
+
+
+#wrapper {
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 10em;
+  padding: 50px 0;
+}
+
+
+#wrapper {
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 10em;
+  padding: 50px 0;
+}
+
+span { 
+  text-shadow: -0.06em 0 red,  0.06em 0 cyan; /* This creates the 3D effect, pretty easy, eh? */
+  letter-spacing: 0.08em; /* make sure the letters don't overlap */
+}
+
+p {
+  margin: 0;
+}
+
+
+#title {
+  font-family: Helvetica, Geneva, sans-serif; /* Any font would work, but SansSerif looks better */
+}
+#title:focus {
+  outline: none;
+}
+#title span {
+  vertical-align: middle;
+  line-height: 1.5em;
+  transition: font-size 2s cubic-bezier(0, 1, 0, 1);
+}
+#title span:active {
+  font-size: 1em;
+  text-shadow: none; 
+}
+
+
+#slogan { font-size: 0.25em; }
+#slogan span:active { text-shadow: none; }
+
+
+
