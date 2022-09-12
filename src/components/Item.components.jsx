@@ -10,21 +10,17 @@ function TodoItem(props) {
         <div className="Img">
             <li className="TodoItem">
                 <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="https://static.vecteezy.com/system/resources/thumbnails/002/317/571/small/neon-with-yellow-question-mark-on-a-gray-brick-wall-with-spotlight-area-copy-space-3d-rendering-free-photo.jpg" />
-                    <div className="Botones"><Button variant="danger"><FontAwesomeIcon icon={faVideo} /></Button>
-                        <Button variant="primary"><FontAwesomeIcon icon={faClipboardCheck} /></Button>
+                    <Card.Img variant="top" class ="imagen" src="https://static.vecteezy.com/system/resources/thumbnails/002/317/571/small/neon-with-yellow-question-mark-on-a-gray-brick-wall-with-spotlight-area-copy-space-3d-rendering-free-photo.jpg" />
+                    <div className="Botones"><Button variant="danger" ><FontAwesomeIcon icon={faVideo} /></Button>
+                        <Button variant="primary"  onClick={props.onComplete}><FontAwesomeIcon icon={faClipboardCheck} /></Button>
                     </div>
                     <Card.Body>
                         <Card.Text>
-                            <p>{props.text}</p>
+                            <p  className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>{props.text}</p>
                         </Card.Text>
-
                     </Card.Body>
-
                 </Card>
-
             </li>
-
         </div>
     )
 }
