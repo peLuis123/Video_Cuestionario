@@ -1,0 +1,187 @@
+/* QuestionRecording.css */
+.container {
+    max-width: 864px; /* Ancho del contenedor principal */
+    height: 708px; /* Alto del contenedor principal */
+    margin: 5% auto;
+    padding: 20px;
+  }
+
+  .video-question-container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-container {
+    width: 864px;
+    height: 712px;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative; /* Para posicionar los botones dentro del contenedor */
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .question-container {
+    width: 864px;
+    height: 96px;
+    background-color: #c4c4c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .question {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Estilos para el botón redondo */
+  .circle-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .gray {
+    background-color: #ccc;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  /* Estilos para el botón cuadrado */
+  .square {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  /* Estilos para los demás elementos */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  button.grabar {
+    background-color: #4caf50;
+    color: white;
+  }
+
+  button.stop {
+    background-color: #f44336;
+    color: white;
+  }
+
+  /* Otros estilos */
+  .navigation-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navigation-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .navigation-button:hover {
+    background-color: #0056b3;
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .timer-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .container {
+    max-width: 864px;
+    height: 708px;
+    margin: 5% auto;
+    padding: 20px;
+    display: flex; /* Alinea los elementos en una fila */
+    flex-direction: column;
+    align-items: center; /* Alinea verticalmente los elementos */
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    display: flex; /* Alinea los elementos en una fila */
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin-left: -10px; /* Espacio entre el enlace y el título */
+  }
+
+  a:hover {
+    color: #0056b3;
+  }
+
+  .back-icon {
+    margin-right: 5px;
+  }

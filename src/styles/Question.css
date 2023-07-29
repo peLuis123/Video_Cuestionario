@@ -1,4 +1,11 @@
 .images-grid{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }

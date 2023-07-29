@@ -1,23 +1,53 @@
-.CreateTodoButton{
-    background-color: aliceblue;
-    box-shadow: 0px 5px 25px rgba(97, 228, 250, 0.6);
-    border: none;
-    cursor: pointer;
-    font-size: 50px;
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    font-weight: bold;
-    color: rgb(0,0,0);
-    display: flex;
+.addItemContainer {
+    position: relative;
+  }
 
-    justify-content: center;
-    align-items: center;
-    height: 64px;
-    width: 64px;
-    transform: rotate(0);
-    transition: .3s ease;
-}
-.CreateTodoButton:hover{
-    transform: rotate(224deg);
-}
+  .CreateTodoButton {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    background-color: #f18a4b;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .CreateTodoButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-content {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+  }
+
+  .modal-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .modal-footer {
+    border-top: none;
+    padding-top: 15px;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .modal-dialog {
+    max-width: 400px;
+  }

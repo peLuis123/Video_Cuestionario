@@ -6,14 +6,6 @@ import Rutas from "./routes/routes";
 export default function App() {
   return (
     <Rutas/>
-    // <BrowserRouter>
-    //   <Link to="/home" target="_self">
-    //     <button>Link Button</button>
-    //   </Link>
-    //   <Routes>
-    //     <Route path="/camara" element={<Question1 />} />
-    //     <Route path="/home" element={<Home />} />
-    //   </Routes>
-    // </BrowserRouter>
+
   )
 }

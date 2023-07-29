@@ -1,32 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import '../styles/item.css'
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faVideo } from '@fortawesome/free-solid-svg-icons'
-import { faClipboardCheck } from '@fortawesome/free-solid-svg-icons'
+import "../styles/item.css";
+
 function TodoItem(props) {
-    return (
-        <div className="Img">
-            <li className="TodoItem">
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" class="imagen" src="https://static.vecteezy.com/system/resources/thumbnails/002/317/571/small/neon-with-yellow-question-mark-on-a-gray-brick-wall-with-spotlight-area-copy-space-3d-rendering-free-photo.jpg" />
-                    <div className="Botones">
-                        <Link to={`/questions/camara/${props.text}`} target="_self">
-                            <Button variant="danger" ><FontAwesomeIcon icon={faVideo} /></Button>
-                        </Link>
-                        <Button variant="primary" onClick={props.onComplete}><FontAwesomeIcon icon={faClipboardCheck} /></Button>
-                    </div>
-                    <Card.Body>
-                        <Card.Text>
-                            <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>{props.text}</p>
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </li>
-        </div>
-    )
+  const [triangleClicked, setTriangleClicked] = useState(false);
+
+  const handleTriangleClick = () => {
+    setTriangleClicked(!triangleClicked);
+  };
+
+  return (
+    <div className="TodoItem">
+      <div className="TodoItem-top">
+        <Link to={`/questions/camara/${props.text}`} target="_self">
+          <div className="play-button" onClick={handleTriangleClick}>
+            <div className="triangle"></div>
+          </div>
+        </Link>
+      </div>
+      <div className="TodoItem-content">
+        <p
+          className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}
+        >
+          {props.text}
+        </p>
+      </div>
+    </div>
+  );
 }
 
 export { TodoItem };
